@@ -1,0 +1,54 @@
+window.onscroll = function() {stickyNav()};
+
+// Get the navbar
+const navbar = document.querySelector('.js-nav');
+const indecator = document.querySelector('.js-navbar-indecator');
+const section = document.getElementsByClassName('tab-content');
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyNav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
+// Tabs
+navbar.addEventListener('click', function (evt) {
+    if (evt.target.nodeName === 'A') {  // ← verifies target is desired element
+        animate(evt.target);
+        showTab(evt.target);
+    }
+});
+
+// seating width and potsion for the active tab
+(function setActiveLink(){
+  let activeLink = document.querySelector('.nav_activeLink');
+  indecator.style.width = `${activeLink.scrollWidth}px`;
+  indecator.style.left = `${activeLink.offsetLeft}px`;
+}())
+
+// animating the indecator after clicking on the tab
+function animate(elm){
+  let linkWidth = elm.scrollWidth;
+  let linkOffest = elm.offsetLeft;
+  // console.log(`left`, linkOffest, `width`, linkWidth);
+  indecator.style.width = `${linkWidth}px`;
+  indecator.style.left = `${linkOffest}px`;
+}
+// show targeting tab
+function showTab(elm) { 
+  let activeLink = document.querySelector('.nav_activeLink');
+  activeLink.classList.remove("nav_activeLink");
+  elm.classList.add("nav_activeLink");
+  let targetTab = elm.getAttribute("data-tabId");
+  let oldActiveSection = document.querySelector('.tab-content.tab_active');
+  let activeSection = document.getElementById(targetTab)
+  oldActiveSection.classList.remove("tab_active");
+  activeSection.classList.add("tab_active");
+
+ }

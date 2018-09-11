@@ -1,0 +1,85 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* header styling*/
+.movie-header {
+  background: #66800D;
+  color: #fff;
+  padding: 16px;
+  border-bottom: 1px solid #90a15d;
+}
+
+.movie-header_name {
+  font-size: 16px;
+  margin: 0;
+  display: inline-block;
+}
+
+.movie-header_moreLinks {
+  float: right;
+  color: #fff;
+  background: none;
+  border: 0;
+}
+
+.movie-header_info {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+}
+
+.movie-topNav {
+  background: #566c17;
+  padding: 0 16px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+.movie-topNav_link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  height: 48px;
+  line-height: 48px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 12px;
+  padding: 0 8px;
+  text-transform: uppercase;
+  /*background: green;*/
+}
+
+.nav_activeLink {
+  color: #fff;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + section {
+  padding-top: 100px;
+}
+
+.navbar-indecator {
+  height: 3px;
+  background: #fff;
+  min-width: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  left: 16px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab_active {
+  display: block;
+}
