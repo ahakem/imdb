@@ -78,8 +78,53 @@ body {
 
 .tab-content {
   display: none;
+  margin-top: 16px;
 }
 
 .tab_active {
   display: block;
+}
+
+.slider {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+.slider img {
+  height: 200px;
+  border-radius: 3px;
+}
+
+.img-overlay {
+  position: absolute;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.9);
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: none;
+}
+.img-overlay.active-img {
+  display: block;
+}
+.img-overlay img {
+  width: 100%;
+}
+
+.overlay-close {
+  position: absolute;
+  z-index: 101;
+  top: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.empty-space {
+  height: 2000px;
 }

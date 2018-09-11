@@ -1,21 +1,18 @@
 window.onscroll = function() {stickyNav()};
-
 // Get the navbar
 const navbar = document.querySelector('.js-nav');
 const indecator = document.querySelector('.js-navbar-indecator');
-const section = document.getElementsByClassName('tab-content');
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
 }
-
 
 // Tabs
 navbar.addEventListener('click', function (evt) {
@@ -50,5 +47,27 @@ function showTab(elm) {
   let activeSection = document.getElementById(targetTab)
   oldActiveSection.classList.remove("tab_active");
   activeSection.classList.add("tab_active");
-
  }
+
+//  ########################## Slider ###################
+const slider = document.querySelector('.js-slider');
+const overlaywraper = document.querySelector('.js-img-overlay');
+const closeOverlayBtn = document.querySelector('.js-close-overlay');
+
+
+slider.addEventListener('click', function (evt) {
+  if (evt.target.nodeName === 'IMG') { 
+    openSliderOverlay(evt.target)
+  }
+});
+
+closeOverlayBtn.addEventListener('click', function () {
+  overlaywraper.classList.remove("active-img")
+});
+
+function openSliderOverlay(img){
+  const overlay = document.querySelector('.js-img-overlay_content');
+  overlay.innerHTML = img.outerHTML;
+  overlaywraper.classList.add("active-img")
+
+}
