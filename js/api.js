@@ -1,6 +1,6 @@
 
 function getMovie(movieName) {
-  fetch(`http://www.omdbapi.com/?t=${movieName}&plot=full&apikey=e18f6d40`)
+  fetch(`https://www.omdbapi.com/?t=${movieName}&plot=full&apikey=e18f6d40`)
       .then(response => response.json())
       .then(addData)
 }
@@ -36,4 +36,4 @@ function addData(data) {
   `;
   
 }
-getMovie('inception');
+getMovie('finding dory');
