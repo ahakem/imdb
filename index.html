@@ -14,36 +14,53 @@
     <body>
       <header class="movie-header">
         <div>
-          <h1 class="movie-header_name">The Meg</h1>
+          <h1 class="movie-header_name"></h1>
           <button class="movie-header_moreLinks" ><i class="material-icons">more_vert</i></button> 
         </div>
-        <div class="movie-header_info">
-          2018 ‧ Thriller film/Fantasy ‧ 1h 52m
-        </div>
+        <div class="movie-header_info"></div>
       </header>
       <nav id="navbar" class="movie-topNav js-nav">
         <a class="movie-topNav_link nav_activeLink" data-tabId="overview" href="javascript:;">Overview</a>
         <a class="movie-topNav_link" href="javascript:;" data-tabId="cast">Cast</a>
         <span class="navbar-indecator js-navbar-indecator"></span>
       </nav>
-      <section id="overview" class="tab-content tab_active">
-        <div class="slider js-slider">
-          <img src="images/1.jpg" alt="nemo">
+      <div id="overview" class="tab-content tab_active">
+        <section class="slider js-slider">
+          <img  class="movie-poster" src="">
           <img src="images/2.jpg" alt="nemo">
           <img src="images/3.jpg" alt="nemo">
           <img src="images/4.jpg" alt="nemo">
           <img src="images/5.jpg" alt="nemo">
-        </div>
+        </section>
         <div class="js-img-overlay img-overlay">
           <a class="material-icons overlay-close js-close-overlay" href="javascript:;">close</a>
           <div class="js-img-overlay_content"></div>
         </div>
-      </section>
-      <section id="cast" class="tab-content">Cast</section>
+        <section class="movie-content">
+          <div class="movie-content_rating">
+            <div class="movie-content__source">
+              <a class="movie-content__link imdb_rate" href='javascript:;'></a>
+            </div>
+            <div class="movie-content__source">
+              <a class="movie-content__link rotten_rate" href='javascript:;'></a>
+            </div>
+            <div class="movie-content__source">
+              <a class="movie-content__link metacritic_rate" href='javascript:;'></a>
+            </div>
+          </div>
+          <div class="movie-content_description">
+            <p class="movie_plot"></p>
+            <div class="movie-details"></div>
+          </div>
+          <div class="movie-footer"> <a href="#">show more</a></div>
+        </section>
+      </div>
+      <div id="cast" class="tab-content">Cast</div>
 
       <div class="empty-space"></div>
 
 
       <script type="text/javascript" src="js/design.js"></script>
+      <script type="text/javascript" src="js/api.js"></script>
     </body>
   </html>

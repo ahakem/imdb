@@ -1,9 +1,11 @@
+/* line 1, ../sass/app.scss */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
 /* header styling*/
+/* line 3, ../sass/partials/_header.scss */
 .movie-header {
   background: #66800D;
   color: #fff;
@@ -11,12 +13,14 @@ body {
   border-bottom: 1px solid #90a15d;
 }
 
+/* line 10, ../sass/partials/_header.scss */
 .movie-header_name {
   font-size: 16px;
   margin: 0;
   display: inline-block;
 }
 
+/* line 16, ../sass/partials/_header.scss */
 .movie-header_moreLinks {
   float: right;
   color: #fff;
@@ -24,12 +28,14 @@ body {
   border: 0;
 }
 
+/* line 23, ../sass/partials/_header.scss */
 .movie-header_info {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 8px;
 }
 
+/* line 1, ../sass/partials/_nav.scss */
 .movie-topNav {
   background: #566c17;
   padding: 0 16px;
@@ -37,6 +43,7 @@ body {
   position: relative;
 }
 
+/* line 7, ../sass/partials/_nav.scss */
 .movie-topNav_link {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
@@ -50,20 +57,24 @@ body {
   /*background: green;*/
 }
 
+/* line 19, ../sass/partials/_nav.scss */
 .nav_activeLink {
   color: #fff;
 }
 
+/* line 23, ../sass/partials/_nav.scss */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
+/* line 28, ../sass/partials/_nav.scss */
 .sticky + section {
   padding-top: 100px;
 }
 
+/* line 32, ../sass/partials/_nav.scss */
 .navbar-indecator {
   height: 3px;
   background: #fff;
@@ -76,15 +87,18 @@ body {
   transition: .3s ease all;
 }
 
+/* line 44, ../sass/partials/_nav.scss */
 .tab-content {
   display: none;
   margin-top: 16px;
 }
 
+/* line 48, ../sass/partials/_nav.scss */
 .tab_active {
   display: block;
 }
 
+/* line 1, ../sass/partials/_slider.scss */
 .slider {
   width: 100%;
   overflow-x: scroll;
@@ -92,11 +106,13 @@ body {
   padding: 0 8px;
   box-sizing: border-box;
 }
+/* line 7, ../sass/partials/_slider.scss */
 .slider img {
   height: 200px;
   border-radius: 3px;
 }
 
+/* line 12, ../sass/partials/_slider.scss */
 .img-overlay {
   position: absolute;
   z-index: 100;
@@ -110,17 +126,21 @@ body {
   visibility: hidden;
   opacity: 1;
 }
+/* line 28, ../sass/partials/_slider.scss */
 .img-overlay.active-img {
   visibility: visible;
   animation-name: zoomIn;
 }
+/* line 32, ../sass/partials/_slider.scss */
 .img-overlay.active-img_out {
   animation-name: zoomOut;
 }
+/* line 36, ../sass/partials/_slider.scss */
 .img-overlay img {
   width: 100%;
 }
 
+/* line 40, ../sass/partials/_slider.scss */
 .overlay-close {
   position: absolute;
   z-index: 101;
@@ -133,8 +153,9 @@ body {
   padding: 4px;
 }
 
+/* line 52, ../sass/partials/_slider.scss */
 .empty-space {
-  height: 2000px;
+  height: 200px;
 }
 
 @keyframes zoomIn {
@@ -160,7 +181,75 @@ body {
     opacity: 0;
   }
 }
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+/* line 1, ../sass/partials/_content.scss */
+.movie-content {
+  border-radius: 5px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  min-height: 100px;
+  margin: 8px;
+}
+
+/* line 8, ../sass/partials/_content.scss */
+.movie-content_rating {
+  display: flex;
+  border-bottom: 1px solid #e1e1e3;
+}
+
+/* line 12, ../sass/partials/_content.scss */
+.movie-content__source {
+  padding: 16px;
+  flex-grow: 2;
+  border-right: 1px solid #e1e1e3;
+}
+/* line 16, ../sass/partials/_content.scss */
+.movie-content__source:last-child {
+  border-right: 0;
+}
+
+/* line 20, ../sass/partials/_content.scss */
+.movie-content__link {
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  text-decoration: none;
+  font-size: 12px;
+}
+/* line 25, ../sass/partials/_content.scss */
+.movie-content__link span {
+  display: block;
+  color: #1967D2;
+  margin-top: 4px;
+}
+
+/* line 32, ../sass/partials/_content.scss */
+.movie-content_description {
+  border-bottom: 1px solid #e1e1e3;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* line 38, ../sass/partials/_content.scss */
+.movie-deatils {
+  padding: 0;
+}
+/* line 40, ../sass/partials/_content.scss */
+.movie-deatils li {
+  display: block;
+  margin-bottom: 4px;
+}
+/* line 43, ../sass/partials/_content.scss */
+.movie-deatils li span {
+  color: #70757A;
+}
+
+/* line 48, ../sass/partials/_content.scss */
+.movie-footer {
+  padding: 16px;
+  font-size: 16px;
+  text-align: center;
+}
+/* line 52, ../sass/partials/_content.scss */
+.movie-footer a {
+  color: #1967D2;
+  text-decoration: none;
 }

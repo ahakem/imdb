@@ -33,7 +33,7 @@ navbar.addEventListener('click', function (evt) {
 function animate(elm){
   let linkWidth = elm.scrollWidth;
   let linkOffest = elm.offsetLeft;
-  // console.log(`left`, linkOffest, `width`, linkWidth);
+  console.log(`left`, linkOffest, `width`, linkWidth);
   indecator.style.width = `${linkWidth}px`;
   indecator.style.left = `${linkOffest}px`;
 }
