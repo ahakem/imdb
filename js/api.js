@@ -36,4 +36,4 @@ function addData(data) {
   `;
   
 }
-getMovie('finding dory');
+getMovie('inception');
