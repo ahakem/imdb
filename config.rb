@@ -22,7 +22,7 @@ relative_assets = true
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
 
-line_comments = false # by Compass.app 
+line_comments = true # by Compass.app 
 
 
 output_style = :expanded # by Compass.app 
