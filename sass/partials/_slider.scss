@@ -16,10 +16,23 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  display: none;
+  // display: none;
+  // -webkit-animation-name: fadeIn;
+  
+  // -webkit-animation-duration: .5s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  visibility: hidden;
+  opacity: 1;
   &.active-img{
-    display: block;
+    visibility: visible;
+    animation-name: zoomIn;
   }
+  &.active-img_out{
+    animation-name: zoomOut;
+  }
+ 
   img{
     width: 100%;
   }
@@ -38,4 +51,30 @@
 
 .empty-space{
   height: 2000px;
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
 }

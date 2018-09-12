@@ -62,12 +62,18 @@ slider.addEventListener('click', function (evt) {
 });
 
 closeOverlayBtn.addEventListener('click', function () {
-  overlaywraper.classList.remove("active-img")
+  
+  overlaywraper.classList.add("active-img_out");
+  setTimeout(function(){ 
+    overlaywraper.classList.remove("active-img", "active-img_out");
+   }, 400);
+
 });
 
 function openSliderOverlay(img){
   const overlay = document.querySelector('.js-img-overlay_content');
   overlay.innerHTML = img.outerHTML;
-  overlaywraper.classList.add("active-img")
+  // overlaywraper.classList.remove("active-img_out ");
+  overlaywraper.classList.add("active-img");
 
 }
