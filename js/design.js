@@ -26,7 +26,7 @@ navbar.addEventListener('click', function (evt) {
 (function setActiveLink(){
   let activeLink = document.querySelector('.nav_activeLink');
   indecator.style.width = `${activeLink.scrollWidth}px`;
-  indecator.style.left = `${activeLink.offsetLeft}px`;
+  indecator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
 }())
 
 // animating the indecator after clicking on the tab
@@ -35,7 +35,7 @@ function animate(elm){
   let linkOffest = elm.offsetLeft;
   console.log(`left`, linkOffest, `width`, linkWidth);
   indecator.style.width = `${linkWidth}px`;
-  indecator.style.left = `${linkOffest}px`;
+  indecator.style.transform = `translateX(${linkOffest}px)`;
 }
 // show targeting tab
 function showTab(elm) { 
