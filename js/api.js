@@ -4,27 +4,17 @@ function getMovie(movieName) {
       .then(response => response.json())
       .then(addData)
 }
-
+const q = document.querySelector.bind(document);
 function addData(data) {
-  const title = document.querySelector('.movie-header_name');
-  const type = document.querySelector('.movie-header_info');
-  const poster = document.querySelector('.movie-poster');
-  const imdb = document.querySelector('.imdb_rate');
-  const rotten = document.querySelector('.rotten_rate');
-  const metacritic = document.querySelector('.metacritic_rate');
-  const plot = document.querySelector('.movie_plot');
-  const details = document.querySelector('.movie-details');
+  q('.movie-poster').setAttribute("src", data.Poster);
+  q('.movie-header_name').textContent = data.Title ;
+  q('.movie-header_info').textContent = `${data.Year} ${data.Genre} . ${data.Runtime}`;
+  q('.imdb_rate').innerHTML = `${data.imdbRating} <span>imdb</span>`;
+  q('.rotten_rate').innerHTML = `${data.Ratings[1].Value} <span>Rotten Tomatoes</span>`;
+  q('.metacritic_rate').innerHTML = `${data.Ratings[2].Value} <span>Metacritic</span>`;
+  q('.movie_plot').textContent = data.Plot;
 
-  
-  poster.setAttribute("src", data.Poster);
-  title.textContent = data.Title;
-  type.textContent = `${data.Year} ${data.Genre} . ${data.Runtime}`;
-  imdb.innerHTML = `${data.imdbRating} <span>imdb</span>`;
-  rotten.innerHTML = `${data.Ratings[1].Value} <span>Rotten Tomatoes</span>`;
-  metacritic.innerHTML = `${data.Ratings[2].Value} <span>Metacritic</span>`;
-  plot.textContent = data.Plot;
-
-  details.innerHTML = `
+  q('.movie-details').innerHTML = `
     <ul class="movie-deatils">
       <li>Director: <span>${data.Director}</span></li>
       <li>Language: <span>${data.Language}</span></li>
