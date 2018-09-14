@@ -67,14 +67,15 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
-/* line 28, ../sass/partials/_nav.scss */
+/* line 29, ../sass/partials/_nav.scss */
 .sticky + section {
   padding-top: 100px;
 }
 
-/* line 32, ../sass/partials/_nav.scss */
+/* line 33, ../sass/partials/_nav.scss */
 .navbar-indecator {
   height: 3px;
   background: #fff;
@@ -87,13 +88,13 @@ body {
   transition: .3s ease all;
 }
 
-/* line 44, ../sass/partials/_nav.scss */
+/* line 45, ../sass/partials/_nav.scss */
 .tab-content {
   display: none;
   margin-top: 16px;
 }
 
-/* line 48, ../sass/partials/_nav.scss */
+/* line 49, ../sass/partials/_nav.scss */
 .tab_active {
   display: block;
 }
