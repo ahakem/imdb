@@ -1,74 +1,16 @@
-var model = {
-  currentActor: null,
-  cast: [
-      {
-        name : 'Matthew McConaughey',
-        character : 'Copper',
-        imgSrc : 'images/cast/matthew.jpg'
-      },
-      {
-        name : 'Anne Hathaway',
-        character : 'Brand',
-        imgSrc : 'images/cast/anne.jpg'
-      },
-      {
-        name : 'Jessica Chastainy',
-        character : 'Murph',
-        imgSrc : 'images/cast/jessica.jpg'
-      },
-      {
-        name : 'Michael Caine',
-        character : 'Professor Brand',
-        imgSrc : 'images/cast/michel.jpg'
-      },
-      {
-        name : 'Mackenzie Foy',
-        character : 'Murph',
-        imgSrc : 'images/cast/Mackenzie.jpg'
-      },
-      {
-        name : 'Matt Damon',
-        character : 'Mann',
-        imgSrc : 'images/cast/matt.jpg'
-      },
-      {
-        name : 'Casey Affleck',
-        character : 'Tom',
-        imgSrc : 'images/cast/casey.jpg'
-      },
-      {
-        name : 'Timothee Chalamet',
-        character : 'Tom',
-        imgSrc : 'images/cast/timothee.jpg'
-      },
-      {
-        name : 'Wes Bentely',
-        character : 'Doyle',
-        imgSrc : 'images/cast/wes.jpg'
-      },
-      {
-        name : 'topher Grace',
-        character : 'Getty',
-        imgSrc : 'images/cast/topher.jpg'
-      },
-      {
-        name : 'Ellen Burstyn',
-        character : 'Murph',
-        imgSrc : 'images/cast/elean.jpg'
-      },
-      {
-        name : 'John Lithgow',
-        character : 'Donald',
-        imgSrc : 'images/cast/john.jpg'
-      },
-      
-  ]
-};
 
 var octopus = {
   init: function() {
+    model.currentActor = model.cast[0];
       castListView.init();
+      actorView.init();
   },
+  getCurrentActor: function() {
+    return model.currentActor;
+  },
+  setCurrentActor: function(actor) {
+    model.currentActor = actor;
+},
 
   getCast: function() {
       return model.cast;
@@ -76,6 +18,28 @@ var octopus = {
 
 };
 
+
+var actorView = {
+
+  init: function() {
+    // store pointers to our DOM elements for easy access later
+    this.actorElem = document.getElementById('actor');
+    this.actorNameElem = document.getElementById('actor-name');
+    this.actorImageElem = document.getElementById('actor-img');
+
+    // render this view (update the DOM elements with the right values)
+    this.render();
+  },
+
+render: function() {
+    // update the DOM elements with values from the current cat
+    var currentActor = octopus.getCurrentActor();
+    var actorPhotos = currentActor.photos;
+    // this.countElem.textContent = actorPhotos;
+    this.actorNameElem.textContent = currentActor.name;
+    this.actorImageElem.src = currentActor.imgSrc;
+  }
+};
 
 var castListView = {
 
@@ -86,21 +50,24 @@ var castListView = {
 
   render: function() {
       var cast, elem, i;
-      // get the cats we'll be rendering from the octopus
       var cast = octopus.getCast();
       this.castListElem.innerHTML = '';
-      // loop over the cast
       for (i = 0; i < cast.length; i++) {
-          // this is the actor we're currently looping over
           actor = cast[i];
           elem = document.createElement('div');
           elem.classList.add("movie-cast_actor");
           elem.innerHTML = `
-            <a href="javascript'">
+            <a href="castDetails.html">
               <div><img src="${actor.imgSrc}" alt="${actor.name}"></div>
               <span class="movie-cast_actorname">${actor.name}</span>
               <span class="movie-cast_caractername">${actor.character}</span>
             </a> `
+          elem.addEventListener('click', (function(actorCopy) {
+              return function() {
+                  octopus.setCurrentActor(actorCopy);
+                  actorView.render();
+              };
+          })(actor));
           this.castListElem.appendChild(elem);
       }
   }
