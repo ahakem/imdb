@@ -26,4 +26,4 @@ function renderData(data) {
   `;
   
 }
-getMovie('finding dory');
+getMovie('interstellar');
