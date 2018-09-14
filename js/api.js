@@ -2,10 +2,10 @@
 function getMovie(movieName) {
   fetch(`https://www.omdbapi.com/?t=${movieName}&plot=full&apikey=e18f6d40`)
       .then(response => response.json())
-      .then(addData)
+      .then(renderData)
 }
-const q = document.querySelector.bind(document);
-function addData(data) {
+let q = document.querySelector.bind(document);
+function renderData(data) {
   q('.movie-poster').setAttribute("src", data.Poster);
   q('.movie-header_name').textContent = data.Title ;
   q('.movie-header_info').textContent = `${data.Year} ${data.Genre} . ${data.Runtime}`;
