@@ -18,7 +18,6 @@ var octopus = {
 
 };
 
-
 var actorView = {
 
   init: function() {
@@ -57,7 +56,7 @@ var castListView = {
           elem = document.createElement('div');
           elem.classList.add("movie-cast_actor");
           elem.innerHTML = `
-            <a href="castDetails.html">
+            <a href="javascript:;">
               <div><img src="${actor.imgSrc}" alt="${actor.name}"></div>
               <span class="movie-cast_actorname">${actor.name}</span>
               <span class="movie-cast_caractername">${actor.character}</span>
