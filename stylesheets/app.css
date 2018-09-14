@@ -82,7 +82,7 @@ body {
   position: absolute;
   bottom: 0;
   z-index: 99;
-  left: 16px;
+  left: 0;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
 }
@@ -252,4 +252,59 @@ body {
 .movie-footer a {
   color: #1967D2;
   text-decoration: none;
+}
+
+/* line 1, ../sass/partials/_castList.scss */
+.movie-cast {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 4px 8px;
+}
+
+/* line 7, ../sass/partials/_castList.scss */
+.movie-cast_actor {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  flex-grow: 1;
+  margin: 8px 4px 0;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  width: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-decoration: none;
+  padding-bottom: 12px;
+}
+/* line 21, ../sass/partials/_castList.scss */
+.movie-cast_actor > div {
+  width: 100%;
+  height: 100px;
+  background: red;
+  overflow: hidden;
+}
+/* line 28, ../sass/partials/_castList.scss */
+.movie-cast_actor img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* line 35, ../sass/partials/_castList.scss */
+.movie-cast_actorname {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  margin: 8px 8px 4px 8px;
+}
+
+/* line 41, ../sass/partials/_castList.scss */
+.movie-cast_caractername {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 4px;
+  color: rgba(0, 0, 0, 0.54);
+  display: block;
+  margin: 0 8px;
 }
