@@ -1,4 +1,4 @@
-let q = document.querySelector.bind(document);
+const q = document.querySelector.bind(document);
 
 window.onscroll = function() {stickyNav()};
 // Get the navbar
