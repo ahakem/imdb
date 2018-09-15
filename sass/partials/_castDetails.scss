@@ -28,6 +28,16 @@
     
     + .castDetails-tab-content{
       padding-top: 114px;
+      .tab-content{
+        &:first-child.animated{
+        animation-name:slideInRight ;
+        animation-duration: .4s;
+        }
+        &:last-child{
+          animation-name: slideInLeft;
+          animation-duration: .4s;
+          }
+      }
     }
     header{
       border-bottom: 0;
@@ -45,6 +55,30 @@
       .navbar-indecator{
         // width: 49.6%;
       }
+    }
+  }
+  @keyframes slideInLeft {
+    from {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
   }
   .empty-space{

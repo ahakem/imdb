@@ -1,0 +1,12 @@
+.movies-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 4px 8px;
+}
+.movies-list_movieWraper{
+  flex-grow: 1;
+  width: 100px;
+  box-sizing: border-box;
+  padding: 24px;
+  background: pink;
+}

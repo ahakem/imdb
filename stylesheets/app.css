@@ -379,26 +379,58 @@ body {
   padding-top: 114px;
 }
 /* line 32, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper + .castDetails-tab-content .tab-content:first-child.animated {
+  animation-name: slideInRight;
+  animation-duration: .4s;
+}
+/* line 36, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper + .castDetails-tab-content .tab-content:last-child {
+  animation-name: slideInLeft;
+  animation-duration: .4s;
+}
+/* line 42, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper header {
   border-bottom: 0;
   background-color: #2f4975;
 }
-/* line 37, ../sass/partials/_castDetails.scss */
+/* line 47, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper nav {
   background-color: #2f4975;
 }
-/* line 41, ../sass/partials/_castDetails.scss */
+/* line 51, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper nav a {
   width: 49.6%;
   text-align: center;
 }
-/* line 50, ../sass/partials/_castDetails.scss */
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 84, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .empty-space {
   height: 2000px;
   background: blue;
 }
 
-/* line 55, ../sass/partials/_castDetails.scss */
+/* line 89, ../sass/partials/_castDetails.scss */
 .cast-details_input {
   width: 100%;
   padding: 16px;
@@ -418,7 +450,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 75, ../sass/partials/_castDetails.scss */
+/* line 109, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading {
   background-color: #2f4975;
   color: #fff;
@@ -427,7 +459,7 @@ body {
   margin-top: -4px;
   position: relative;
 }
-/* line 82, ../sass/partials/_castDetails.scss */
+/* line 116, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading h1 {
   font-family: Roboto-Light,HelveticaNeue-Light,HelveticaNeue,sans-serif-light,Arial,sans-serif;
   font-size: 24px;
@@ -442,7 +474,7 @@ body {
   animation-duration: .4s;
   animation-fill-mode: both;
 }
-/* line 96, ../sass/partials/_castDetails.scss */
+/* line 130, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading span {
   display: block;
   color: rgba(255, 255, 255, 0.7);
@@ -464,12 +496,12 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 121, ../sass/partials/_castDetails.scss */
+/* line 155, ../sass/partials/_castDetails.scss */
 .castDetails-actor_info__wraper {
   padding: 24px;
 }
 
-/* line 125, ../sass/partials/_castDetails.scss */
+/* line 159, ../sass/partials/_castDetails.scss */
 .castDetails-acto_bio {
   color: rgba(0, 0, 0, 0.87);
   line-height: 20px;
@@ -479,14 +511,14 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 134, ../sass/partials/_castDetails.scss */
+/* line 168, ../sass/partials/_castDetails.scss */
 .actor-deatils {
   padding: 0;
   animation-name: fadeInUp;
   animation-duration: .4s;
   animation-fill-mode: both;
 }
-/* line 139, ../sass/partials/_castDetails.scss */
+/* line 173, ../sass/partials/_castDetails.scss */
 .actor-deatils li {
   display: block;
   margin-bottom: 4px;
@@ -494,7 +526,7 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
-/* line 145, ../sass/partials/_castDetails.scss */
+/* line 179, ../sass/partials/_castDetails.scss */
 .actor-deatils li span {
   color: #70757A;
   font-weight: normal;
