@@ -1,7 +1,7 @@
 window.onscroll = function() {stickyNav()};
 // Get the navbar
 const navbar = document.querySelector('.js-nav');
-const indecator = document.querySelector('.js-navbar-indecator');
+const indecator = document.querySelectorAll('.js-navbar-indecator');
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 
@@ -24,9 +24,11 @@ navbar.addEventListener('click', function (evt) {
 
 // seating width and potsion for the active tab
 (function setActiveLink(){
-  let activeLink = document.querySelector('.nav_activeLink');
-  indecator.style.width = `${activeLink.scrollWidth}px`;
-  indecator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
+  let activeLink = document.querySelectorAll('.nav_activeLink');
+  indecator[0].style.width = `${activeLink[0].scrollWidth}px`;
+  indecator[0].style.transform = `translateX(${activeLink[0].offsetLeft}px)`;
+  // indecator[1].style.width = `50%`;
+  indecator[1].style.transform = `translateX(${activeLink[1].offsetLeft}px)`;
 }())
 
 // animating the indecator after clicking on the tab
@@ -34,8 +36,8 @@ function animate(elm){
   let linkWidth = elm.scrollWidth;
   let linkOffest = elm.offsetLeft;
   console.log(`left`, linkOffest, `width`, linkWidth);
-  indecator.style.width = `${linkWidth}px`;
-  indecator.style.transform = `translateX(${linkOffest}px)`;
+  indecator[0].style.width = `${linkWidth}px`;
+  indecator[0].style.transform = `translateX(${linkOffest}px)`;
 }
 // show targeting tab
 function showTab(elm) { 

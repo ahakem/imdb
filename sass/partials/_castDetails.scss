@@ -1,0 +1,145 @@
+.castDetails{
+  background:#fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 102;
+  // display: none;
+
+}
+.castDetails-content_wraper{
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+  
+  .castDetails-heder_wraper{
+    position: fixed;
+    z-index: 103;
+    top: 0;
+    width: 100%;
+    animation-duration: .7s;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+    
+    + .castDetails-tab-content{
+      padding-top: 130px;
+    }
+    header{
+      border-bottom: 0;
+      background-color: rgb(47, 73, 117);
+    }
+    nav{
+      background-color: rgb(47, 73, 117);
+      // padding: 0;
+      a{
+        width: 49.6%;
+        text-align: center;
+      }
+      .navbar-indecator{
+        width: 49.6%;
+      }
+    }
+  }
+  .empty-space{
+    height: 2000px;
+    background: blue;
+  }
+}
+.cast-details_input{
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 0;
+  font-size: 16px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: .5;
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.castDetails-actor_heading{
+  background-color: rgb(47, 73, 117);
+  color: #fff;
+  padding: 0 16px;
+  margin: 0;
+  margin-top: -4px;
+  position: relative;
+  h1{
+    font-family: Roboto-Light,HelveticaNeue-Light,HelveticaNeue,sans-serif-light,Arial,sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    padding-bottom: 2px;
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+    font-weight: normal;
+    margin: 0;
+    animation-name: fadeInUp;
+    animation-duration: .4s;
+    animation-fill-mode: both;
+  }
+  span{
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Roboto,HelveticaNeue,Arial,sans-serif;
+    font-size: 14px;
+    padding-bottom: 20px;
+    animation-name: fadeInUp;
+    animation-duration: .4s;
+    animation-fill-mode: both;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.castDetails-actor_info__wraper{
+  padding: 24px;
+  
+}
+.castDetails-acto_bio{
+  color: rgba(0,0,0,0.87);
+    line-height: 20px;
+    font-size: 14px;
+    animation-name: fadeInUp;
+    animation-duration: .4s;
+    animation-fill-mode: both;
+
+}
+.actor-deatils{
+  padding: 0;
+  animation-name: fadeInUp;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+  li{
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    span{
+      color: #70757A;
+      font-weight: normal;
+    }
+  }
+}

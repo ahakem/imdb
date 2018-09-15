@@ -21,12 +21,12 @@ var octopus = {
 var actorView = {
 
   init: function() {
-    // store pointers to our DOM elements for easy access later
-    this.actorElem = document.getElementById('actor');
-    this.actorNameElem = document.getElementById('actor-name');
-    this.actorImageElem = document.getElementById('actor-img');
+    this.actorphotosWraper = document.getElementById('actor-photos');
+    this.actorName = document.getElementById('actor-name');
+    this.actorBio = document.getElementById('actor-bio');
+    this.actorDetails = document.getElementById('actor-deatils');
+    this.actorInput = document.getElementById('actor-input');
 
-    // render this view (update the DOM elements with the right values)
     this.render();
   },
 
@@ -34,9 +34,21 @@ render: function() {
     // update the DOM elements with values from the current cat
     var currentActor = octopus.getCurrentActor();
     var actorPhotos = currentActor.photos;
-    // this.countElem.textContent = actorPhotos;
-    this.actorNameElem.textContent = currentActor.name;
-    this.actorImageElem.src = currentActor.imgSrc;
+    var images = " ";
+    actorPhotos.forEach(function(url) {
+      img = `<img src="${url}" />`;
+      images += img;
+    });
+    this.actorInput.value = currentActor.name;
+    this.actorphotosWraper.innerHTML = images;
+    this.actorName.textContent = currentActor.name;
+    this.actorBio.textContent = currentActor.bio;
+    this.actorDetails.innerHTML = `
+    <li>Spouse: <span>${currentActor.spouse}</span></li>
+    <li>Height: <span>${currentActor.Height}</span></li>
+    <li>Upcoming movie: <span>${currentActor.upcomingmovie}</span></li>
+    <li>Children: <span>${currentActor.children}</span></li>
+    `;
   }
 };
 

@@ -57,13 +57,48 @@
       </div>
       <div id="cast" class="tab-content tab_active">
         <div class="movie-cast" id="castList"></div>
-        <div id="actor">
-          <h2 id="actor-name"></h2>
-          <img id="actor-img" src="" alt="cute cat">
-        </div>
+        
       </div>
 
-      <div class="empty-space"></div>
+      
+
+      <div class="castDetails">
+        <div class="castDetails-content_wraper">
+          <div class="castDetails-heder_wraper">
+            <header class="movie-header">
+              <div>
+                <input id="actor-input" class="cast-details_input" type="text" />
+              </div>
+            </header>
+            <nav id="navbar" class="movie-topNav js-nav">
+              <a class="movie-topNav_link nav_activeLink" data-tabId="cast-overview" href="javascript:;">Overview</a>
+              <a class="movie-topNav_link" href="javascript:;" data-tabId="cast-movies">Cast</a>
+              <span class="navbar-indecator js-navbar-indecator"></span>
+            </nav>
+          </div>
+          <div class="castDetails-tab-content">
+            <section id="actor-photos" class="slider castDetails-actor_slider"></section>
+            <section class="castDetails-actor_heading">
+              <h1 id="actor-name">Andrew Stanton</h1>
+              <span>American film director</span>
+            </section>
+            <section class="castDetails-actor_info__wraper">
+              <p id="actor-bio" class="castDetails-acto_bio">
+                Andrew Stanton is an American film director, screenwriter, producer and voice actor based at Pixar, which he joined in 1990. His film work includes writing and directing Pixar's A Bug's Life, Finding Nemo and its sequel Finding Dory, WALL-E, and the live-action film, Disney's John Carter. Wikipedia
+              </p>
+              <ul id="actor-deatils" class="actor-deatils">
+                <li>Director: <span>Christopher Nolan</span></li>
+                <li>Language: <span>English</span></li>
+                <li>Production: <span>Paramount Pictures</span></li>
+                <li>Rated: <span>PG-13</span></li>
+                <li>Released: <span>07 Nov 2014</span></li>
+                <li>Year: <span>2014</span></li>
+              </ul>
+            </section>
+          </div>
+          <div class="empty-space2"></div>
+        </div>
+      </div>
 
 
       <script type="text/javascript" src="js/design.js"></script>

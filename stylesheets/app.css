@@ -82,7 +82,7 @@ body {
   min-width: 20px;
   position: absolute;
   bottom: 0;
-  z-index: 99;
+  z-index: 101;
   left: 0;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
@@ -127,21 +127,21 @@ body {
   visibility: hidden;
   opacity: 1;
 }
-/* line 28, ../sass/partials/_slider.scss */
+/* line 26, ../sass/partials/_slider.scss */
 .img-overlay.active-img {
   visibility: visible;
   animation-name: zoomIn;
 }
-/* line 32, ../sass/partials/_slider.scss */
+/* line 30, ../sass/partials/_slider.scss */
 .img-overlay.active-img_out {
   animation-name: zoomOut;
 }
-/* line 36, ../sass/partials/_slider.scss */
+/* line 34, ../sass/partials/_slider.scss */
 .img-overlay img {
   width: 100%;
 }
 
-/* line 40, ../sass/partials/_slider.scss */
+/* line 38, ../sass/partials/_slider.scss */
 .overlay-close {
   position: absolute;
   z-index: 101;
@@ -154,7 +154,7 @@ body {
   padding: 4px;
 }
 
-/* line 52, ../sass/partials/_slider.scss */
+/* line 50, ../sass/partials/_slider.scss */
 .empty-space {
   height: 200px;
 }
@@ -180,6 +180,30 @@ body {
   }
   to {
     opacity: 0;
+  }
+}
+/* line 81, ../sass/partials/_slider.scss */
+.castDetails-actor_slider {
+  padding: 0;
+  text-align: left;
+}
+/* line 85, ../sass/partials/_slider.scss */
+.castDetails-actor_slider img {
+  margin-left: -4px;
+  border-radius: 0;
+  animation-name: fadeInRight;
+  animation-duration: .7s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 /* line 1, ../sass/partials/_content.scss */
@@ -313,4 +337,161 @@ body {
   color: rgba(0, 0, 0, 0.54);
   display: block;
   margin: 0 8px;
+}
+
+/* line 1, ../sass/partials/_castDetails.scss */
+.castDetails {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 102;
+}
+
+/* line 12, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper {
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
+}
+/* line 17, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper {
+  position: fixed;
+  z-index: 103;
+  top: 0;
+  width: 100%;
+  animation-duration: .7s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+}
+/* line 26, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper + .castDetails-tab-content {
+  padding-top: 130px;
+}
+/* line 29, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper header {
+  border-bottom: 0;
+  background-color: #2f4975;
+}
+/* line 33, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper nav {
+  background-color: #2f4975;
+}
+/* line 36, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper nav a {
+  width: 49.6%;
+  text-align: center;
+}
+/* line 40, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper nav .navbar-indecator {
+  width: 49.6%;
+}
+/* line 45, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .empty-space {
+  height: 2000px;
+  background: blue;
+}
+
+/* line 50, ../sass/partials/_castDetails.scss */
+.cast-details_input {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 0;
+  font-size: 16px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: .5;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 70, ../sass/partials/_castDetails.scss */
+.castDetails-actor_heading {
+  background-color: #2f4975;
+  color: #fff;
+  padding: 0 16px;
+  margin: 0;
+  margin-top: -4px;
+  position: relative;
+}
+/* line 77, ../sass/partials/_castDetails.scss */
+.castDetails-actor_heading h1 {
+  font-family: Roboto-Light,HelveticaNeue-Light,HelveticaNeue,sans-serif-light,Arial,sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 2px;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+  font-weight: normal;
+  margin: 0;
+  animation-name: fadeInUp;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+}
+/* line 91, ../sass/partials/_castDetails.scss */
+.castDetails-actor_heading span {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Roboto,HelveticaNeue,Arial,sans-serif;
+  font-size: 14px;
+  padding-bottom: 20px;
+  animation-name: fadeInUp;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 116, ../sass/partials/_castDetails.scss */
+.castDetails-actor_info__wraper {
+  padding: 24px;
+}
+
+/* line 120, ../sass/partials/_castDetails.scss */
+.castDetails-acto_bio {
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 20px;
+  font-size: 14px;
+  animation-name: fadeInUp;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+}
+
+/* line 129, ../sass/partials/_castDetails.scss */
+.actor-deatils {
+  padding: 0;
+  animation-name: fadeInUp;
+  animation-duration: .4s;
+  animation-fill-mode: both;
+}
+/* line 134, ../sass/partials/_castDetails.scss */
+.actor-deatils li {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}
+/* line 140, ../sass/partials/_castDetails.scss */
+.actor-deatils li span {
+  color: #70757A;
+  font-weight: normal;
 }

@@ -17,9 +17,7 @@
   bottom: 0;
   width: 100%;
   // display: none;
-  // -webkit-animation-name: fadeIn;
   
-  // -webkit-animation-duration: .5s;
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
@@ -76,5 +74,31 @@
 
   to {
     opacity: 0;
+  }
+}
+
+
+.castDetails-actor_slider{
+  padding: 0;
+  text-align: left;
+  
+  img{
+    margin-left: -4px;
+    border-radius: 0;
+    animation-name: fadeInRight;
+    animation-duration: .7s;
+    animation-fill-mode: both;
+
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

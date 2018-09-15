@@ -9,7 +9,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
@@ -22,12 +22,13 @@ var model = {
         character : 'Brand',
         imgSrc : 'images/cast/anne.jpg',
         bio: 'Matthew David McConaughey is an American actor, producer, model, writer, and director. He first gained notice for his breakout role in the coming-of-age comedy Dazed and Confused',
-        spouse:' Camila Alves',
+        spouse:' Camila Alves2',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
+          'images/1.jpg',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZlywggy7jzlDCKQb5DOjxi3OqpnMNRX-w8gOfUp-Fp7ONEoPP',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoje42677BFEDRTCS4LEIYQ0Zqb0hYXojXCKJRAYLxyuDmIj0SgA'
@@ -39,12 +40,13 @@ var model = {
         character : 'Murph',
         imgSrc : 'images/cast/jessica.jpg',
         bio: 'Matthew David McConaughey is an American actor, producer, model, writer, and director. He first gained notice for his breakout role in the coming-of-age comedy Dazed and Confused',
-        spouse:' Camila Alves',
+        spouse:' Camila Alves3',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
+          'images/2.jpg',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZlywggy7jzlDCKQb5DOjxi3OqpnMNRX-w8gOfUp-Fp7ONEoPP',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoje42677BFEDRTCS4LEIYQ0Zqb0hYXojXCKJRAYLxyuDmIj0SgA'
@@ -59,9 +61,10 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
+          'images/3.jpg',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZlywggy7jzlDCKQb5DOjxi3OqpnMNRX-w8gOfUp-Fp7ONEoPP',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoje42677BFEDRTCS4LEIYQ0Zqb0hYXojXCKJRAYLxyuDmIj0SgA'
@@ -76,9 +79,10 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
+          'images/4.jpg',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZlywggy7jzlDCKQb5DOjxi3OqpnMNRX-w8gOfUp-Fp7ONEoPP',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoje42677BFEDRTCS4LEIYQ0Zqb0hYXojXCKJRAYLxyuDmIj0SgA'
@@ -93,7 +97,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
@@ -110,7 +114,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
@@ -127,7 +131,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
@@ -144,7 +148,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
@@ -161,7 +165,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
@@ -178,7 +182,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
@@ -195,7 +199,7 @@ var model = {
         spouse:' Camila Alves',
         born:'November 4, 1969',
         Height: '1.83 m',
-        upcoming: 'movie: Serenity',
+        upcomingmovie: 'Serenity',
         children: ' Levi Alves McConaughey, Vida Alves McConaughey, Livingston Alves McConaughey',
         photos: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ2vOVxJG7UrX6PiqaxMUSsn4KMDwuUtzv4kDDQ0rjEgjWkBGr',
