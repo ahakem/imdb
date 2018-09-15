@@ -1,16 +1,17 @@
 window.onscroll = function() {stickyNav()};
 // Get the navbar
-const navbar = document.querySelectorAll('.js-nav');
+const stickyNavbar = document.querySelector('.js-stickyNav');
+const navbar = document.querySelectorAll('nav');
 const indecator = document.querySelectorAll('.js-navbar-indecator');
 // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
+var sticky = stickyNavbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
+    stickyNavbar.classList.add("sticky");
   } else {
-    navbar.classList.remove("sticky");
+    stickyNavbar.classList.remove("sticky");
   }
 }
 
@@ -33,13 +34,13 @@ navbar.forEach(function(nav, i) {
   });
 }())
 
-// animating the indecator after clicking on the tab
+// animating the indecator after clicking on the tab and seeting the active tab link
 function animate(elm){
   let linkWidth = elm.scrollWidth;
   let linkOffest = elm.offsetLeft;
-  let parentnav =  elm.closest("nav");
-  let oldActivetab = parentnav.querySelector('.nav_activeLink');
-  let childIndecator = parentnav.querySelector('.js-navbar-indecator');
+  let parentNav =  elm.closest("nav");
+  let oldActivetab = parentNav.querySelector('.nav_activeLink');
+  let childIndecator = parentNav.querySelector('.js-navbar-indecator');
   childIndecator.style.width = `${linkWidth}px`;
   childIndecator.style.transform = `translateX(${linkOffest}px)`;
   oldActivetab.classList.remove("nav_activeLink");
@@ -47,14 +48,14 @@ function animate(elm){
 }
 // show targeting tab
 function showTab(elm) { 
-  // let activeLink = document.querySelector('.nav_activeLink');
-  // activeLink.classList.remove("nav_activeLink");
-  // elm.classList.add("nav_activeLink");
-  // let targetTab = elm.getAttribute("data-tabId");
-  // let oldActiveSection = document.querySelector('.tab-content.tab_active');
-  // let activeSection = document.getElementById(targetTab)
-  // oldActiveSection.classList.remove("tab_active");
-  // activeSection.classList.add("tab_active");
+  let parentNav =  elm.closest("nav");
+  let parentNavAttr = parentNav.getAttribute("data-navContainer");
+  let sectionContainer = document.getElementById(parentNavAttr);
+  let targetTab = elm.getAttribute("data-tabId");
+  let oldActiveSection = sectionContainer.querySelector('.tab-content.tab_active');
+  let activeSection = sectionContainer.querySelector('#'+targetTab);
+  oldActiveSection.classList.remove("tab_active");
+  activeSection.classList.add("tab_active");
  }
 
 //  ########################## Slider ###################

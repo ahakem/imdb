@@ -342,6 +342,7 @@ body {
 /* line 1, ../sass/partials/_castDetails.scss */
 .castDetails {
   background: #fff;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
@@ -357,12 +358,17 @@ body {
 }
 /* line 18, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper {
+  position: fixed;
   z-index: 103;
   top: 0;
   width: 100%;
   animation-duration: .7s;
   animation-fill-mode: both;
   animation-name: fadeInDown;
+}
+/* line 27, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper + .castDetails-tab-content {
+  padding-top: 114px;
 }
 /* line 30, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper header {

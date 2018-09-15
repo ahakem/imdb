@@ -19,7 +19,7 @@
         </div>
         <div class="movie-header_info"></div>
       </header>
-      <nav id="navbar" class="movie-topNav js-nav" data-navContainer="movieTabs">
+      <nav id="navbar" class="movie-topNav js-stickyNav" data-navContainer="movieTabs">
         <a class="movie-topNav_link " data-tabId="overview" href="javascript:;">Overview</a>
         <a class="movie-topNav_link nav_activeLink" href="javascript:;" data-tabId="cast">Cast</a>
         <span class="navbar-indecator js-navbar-indecator"></span>
@@ -71,14 +71,14 @@
                 <input id="actor-input" class="cast-details_input" type="text" />
               </div>
             </header>
-            <nav id="navbar" data-navContainer="castTabs" class="movie-topNav js-nav">
+            <nav id="navbar" data-navContainer="castTabs" class="movie-topNav">
               <a class="movie-topNav_link nav_activeLink" data-tabId="cast-overview" href="javascript:;">Overview</a>
               <a class="movie-topNav_link" href="javascript:;" data-tabId="cast-movies">Movies</a>
               <span class="navbar-indecator js-navbar-indecator"></span>
             </nav>
           </div>
-          <div id="castTabs">
-            <div class="castDetails-tab-content">
+          <div id="castTabs" class="castDetails-tab-content">
+            <div id="cast-overview" class=" tab-content tab_active">
               <section id="actor-photos" class="slider castDetails-actor_slider"></section>
               <section class="castDetails-actor_heading">
                 <h1 id="actor-name">Andrew Stanton</h1>
@@ -89,8 +89,9 @@
                 <ul id="actor-deatils" class="actor-deatils"></ul>
               </section>
             </div>
+            <div id="cast-movies" class="tab-content"> movies</div>
           </div>
-          <div class="empty-space2"></div>
+          <div class="empty-space"></div>
         </div>
       </div>
 
