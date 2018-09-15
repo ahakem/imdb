@@ -80,8 +80,25 @@ closeOverlayBtn.addEventListener('click', function () {
 });
 
 function openSliderOverlay(img){
-  const overlay = document.querySelector('.js-img-overlay_content');
-  overlay.innerHTML = img.outerHTML;
+  q('.js-img-overlay_content').innerHTML = img.outerHTML;
   overlaywraper.classList.add("active-img");
 
+}
+//  ########################## Menu ###################
+q('.dropbtn').addEventListener('click', function () {
+   q('.dropdown-content').classList.toggle("open");
+});
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('open')) {
+        openDropdown.classList.remove('open');
+      }
+    }
+  }
 }

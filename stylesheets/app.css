@@ -27,8 +27,12 @@ body {
   background: none;
   border: 0;
 }
+/* line 21, ../sass/partials/_header.scss */
+.movie-header_moreLinks .material-icons {
+  pointer-events: none;
+}
 
-/* line 23, ../sass/partials/_header.scss */
+/* line 26, ../sass/partials/_header.scss */
 .movie-header_info {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
@@ -54,7 +58,6 @@ body {
   font-size: 12px;
   padding: 0 8px;
   text-transform: uppercase;
-  /*background: green;*/
 }
 
 /* line 19, ../sass/partials/_nav.scss */
@@ -67,7 +70,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 106;
 }
 
 /* line 29, ../sass/partials/_nav.scss */
@@ -495,4 +498,56 @@ body {
 .actor-deatils li span {
   color: #70757A;
   font-weight: normal;
+}
+
+/* line 1, ../sass/partials/_dropdown.scss */
+.dropdown {
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+
+/* line 6, ../sass/partials/_dropdown.scss */
+.dropdown-content {
+  position: absolute;
+  background: #fff;
+  min-width: 235px;
+  width: auto;
+  z-index: 105;
+  right: 0;
+  top: 26px;
+  display: none;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+/* line 16, ../sass/partials/_dropdown.scss */
+.dropdown-content ul {
+  padding: 16px 8px 0 8px;
+  margin: 0;
+  width: 100%;
+}
+/* line 20, ../sass/partials/_dropdown.scss */
+.dropdown-content ul li {
+  display: block;
+  list-style: none;
+}
+/* line 23, ../sass/partials/_dropdown.scss */
+.dropdown-content ul li a {
+  color: rgba(0, 0, 0, 0.54);
+  display: block;
+  font-size: 14px;
+  padding: 16px 24px 16px 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-bottom: 1px;
+  line-height: 20px;
+}
+/* line 32, ../sass/partials/_dropdown.scss */
+.dropdown-content ul li a i.material-icons {
+  float: left;
+  margin-right: 10px;
+  margin-top: -3px;
+}
+/* line 40, ../sass/partials/_dropdown.scss */
+.dropdown-content.open {
+  display: block;
 }

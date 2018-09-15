@@ -1,0 +1,43 @@
+.dropdown{
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+.dropdown-content{
+  position: absolute;
+  background: #fff;
+  min-width: 235px;
+  width: auto;
+  z-index: 105;
+  right: 0;
+  top: 26px;
+  display: none;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  ul{
+    padding: 16px 8px 0 8px;
+    margin: 0;
+    width: 100%;
+    li{
+      display: block;
+      list-style: none;
+      a{
+        color: rgba(0,0,0,.54);
+        display: block;
+        font-size: 14px;
+        padding: 16px 24px 16px 8px;
+        text-decoration: none;
+        white-space: nowrap;
+        margin-bottom: 1px;
+        line-height: 20px;
+        i.material-icons{
+          float: left;
+          margin-right: 10px;
+          margin-top: -3px;
+        }
+      }
+    }
+  }
+  &.open{
+    display: block;
+  }
+}

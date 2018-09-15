@@ -13,8 +13,8 @@
   box-sizing: border-box;
   font-size: 12px;
   padding: 0 8px;
-  text-transform: uppercase;  
-  /*background: green;*/
+  text-transform: uppercase;
+  
 }
 .nav_activeLink{
   color: #fff;
@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 106;
 }
 .sticky + section{
   padding-top: 100px;

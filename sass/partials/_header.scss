@@ -18,6 +18,9 @@
     color: #fff;
     background: none;
     border:0;
+    .material-icons{
+      pointer-events: none;
+    }
 }
 
 .movie-header_info{
