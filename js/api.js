@@ -4,7 +4,6 @@ function getMovie(movieName) {
       .then(response => response.json())
       .then(renderData)
 }
-let q = document.querySelector.bind(document);
 function renderData(data) {
   q('.movie-poster').setAttribute("src", data.Poster);
   q('.movie-header_name').textContent = data.Title ;

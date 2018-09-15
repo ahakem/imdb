@@ -6,8 +6,10 @@
   width: 100%;
   height: 100vh;
   z-index: 102;
-  // display: none;
-  // visibility: hidden;
+  display: none;
+  &.open{
+    display: block;
+  }
 
 }
 .castDetails-content_wraper{
@@ -30,9 +32,11 @@
     header{
       border-bottom: 0;
       background-color: rgb(47, 73, 117);
+      
     }
     nav{
       background-color: rgb(47, 73, 117);
+      
       // padding: 0;
       a{
         width: 49.6%;

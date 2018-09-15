@@ -26,7 +26,6 @@ var actorView = {
     this.actorBio = document.getElementById('actor-bio');
     this.actorDetails = document.getElementById('actor-deatils');
     this.actorInput = document.getElementById('actor-input');
-
     this.render();
   },
 
@@ -56,6 +55,7 @@ var castListView = {
 
   init: function() {
       this.castListElem = document.getElementById('castList');
+      
       this.render();
   },
 
@@ -77,6 +77,8 @@ var castListView = {
               return function() {
                   octopus.setCurrentActor(actorCopy);
                   actorView.render();
+                  q('#castDetails').classList.add("open");
+                  setActiveLink();
               };
           })(actor));
           this.castListElem.appendChild(elem);

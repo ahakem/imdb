@@ -1,3 +1,5 @@
+let q = document.querySelector.bind(document);
+
 window.onscroll = function() {stickyNav()};
 // Get the navbar
 const stickyNavbar = document.querySelector('.js-stickyNav');
@@ -26,14 +28,14 @@ navbar.forEach(function(nav, i) {
   });
 });
 // seating width and potsion for the active tab
-(function setActiveLink(){
+function setActiveLink(){
   let activeLink = document.querySelectorAll('.nav_activeLink');
   indecator.forEach(function(tab, i) {
     tab.style.width = `${activeLink[i].scrollWidth}px`;
     tab.style.transform = `translateX(${activeLink[i].offsetLeft}px)`;
   });
-}())
-
+}
+setActiveLink();
 // animating the indecator after clicking on the tab and seeting the active tab link
 function animate(elm){
   let linkWidth = elm.scrollWidth;
@@ -59,19 +61,17 @@ function showTab(elm) {
  }
 
 //  ########################## Slider ###################
-const slider = document.querySelector('.js-slider');
 const overlaywraper = document.querySelector('.js-img-overlay');
 const closeOverlayBtn = document.querySelector('.js-close-overlay');
 
 
-slider.addEventListener('click', function (evt) {
+q('.js-slider').addEventListener('click', function (evt) {
   if (evt.target.nodeName === 'IMG') { 
     openSliderOverlay(evt.target)
   }
 });
 
 closeOverlayBtn.addEventListener('click', function () {
-  
   overlaywraper.classList.add("active-img_out");
   setTimeout(function(){ 
     overlaywraper.classList.remove("active-img", "active-img_out");
@@ -82,7 +82,6 @@ closeOverlayBtn.addEventListener('click', function () {
 function openSliderOverlay(img){
   const overlay = document.querySelector('.js-img-overlay_content');
   overlay.innerHTML = img.outerHTML;
-  // overlaywraper.classList.remove("active-img_out ");
   overlaywraper.classList.add("active-img");
 
 }
