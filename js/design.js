@@ -109,3 +109,13 @@ for (let index = 0; index < 30; index++) {
   castMovies += castMovie;
 }
 q('.movies-list').innerHTML = castMovies;
+
+//  ########################## show more ###################
+q('.showMoreOrLess').addEventListener('click', function (e) {
+  q('.movie-detailswraper').classList.toggle("open");
+  if (q('.showMoreOrLess').innerHTML === `<span>Show More</span><i class="material-icons">expand_more</i>`) {
+    q('.showMoreOrLess').innerHTML = `Show Less<i class="material-icons">expand_less</i>`;
+  } else {
+    q('.showMoreOrLess').innerHTML = `<span>Show More</span><i class="material-icons">expand_more</i>`;
+  }
+});

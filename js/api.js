@@ -13,7 +13,7 @@ function renderData(data) {
   q('.metacritic_rate').innerHTML = `${data.Ratings[2].Value} <span>Metacritic</span>`;
   q('.movie_plot').textContent = data.Plot;
 
-  q('.movie-details').innerHTML = `
+  q('.movie-detailswraper').innerHTML = `
     <ul class="movie-deatils">
       <li>Director: <span>${data.Director}</span></li>
       <li>Language: <span>${data.Language}</span></li>
