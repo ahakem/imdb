@@ -46,6 +46,14 @@
       flex-wrap: wrap;
       > div {
         flex-grow: 16;
+        position: relative;
+        .search-icon{
+          position: absolute;
+          right: 12px;
+          color: #333;
+          top: 12px;
+          pointer-events: none;
+        }
         &:first-child{
           flex-grow: 1;
           button{
