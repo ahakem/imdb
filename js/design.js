@@ -1,6 +1,6 @@
 window.onscroll = function() {stickyNav()};
 // Get the navbar
-const navbar = document.querySelector('.js-nav');
+const navbar = document.querySelectorAll('.js-nav');
 const indecator = document.querySelectorAll('.js-navbar-indecator');
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
@@ -15,29 +15,35 @@ function stickyNav() {
 }
 
 // Tabs
-navbar.addEventListener('click', function (evt) {
-    if (evt.target.nodeName === 'A') {  // ← verifies target is desired element
-        animate(evt.target);
-        showTab(evt.target);
-    }
+navbar.forEach(function(nav, i) {
+  nav.addEventListener('click', function (evt) {
+      if (evt.target.nodeName === 'A') {  // ← verifies target is desired element
+          animate(evt.target);
+          // showTab(evt.target);
+          
+      }
+  });
 });
-
 // seating width and potsion for the active tab
 (function setActiveLink(){
   let activeLink = document.querySelectorAll('.nav_activeLink');
-  indecator[0].style.width = `${activeLink[0].scrollWidth}px`;
-  indecator[0].style.transform = `translateX(${activeLink[0].offsetLeft}px)`;
-  // indecator[1].style.width = `50%`;
-  indecator[1].style.transform = `translateX(${activeLink[1].offsetLeft}px)`;
+  // indecator[0].style.width = `${activeLink[0].scrollWidth}px`;
+  // indecator[0].style.transform = `translateX(${activeLink[0].offsetLeft}px)`;
+  // indecator[1].style.transform = `translateX(${activeLink[1].offsetLeft}px)`;
+  indecator.forEach(function(tab, i) {
+    tab.style.width = `${activeLink[i].scrollWidth}px`;
+    tab.style.transform = `translateX(${activeLink[i].offsetLeft}px)`;
+  });
 }())
 
 // animating the indecator after clicking on the tab
 function animate(elm){
   let linkWidth = elm.scrollWidth;
   let linkOffest = elm.offsetLeft;
-  console.log(`left`, linkOffest, `width`, linkWidth);
-  indecator[0].style.width = `${linkWidth}px`;
-  indecator[0].style.transform = `translateX(${linkOffest}px)`;
+  let parentnav =  elm.closest("nav");
+  let childIndecator = parentnav.querySelector('.js-navbar-indecator');
+  childIndecator.style.width = `${linkWidth}px`;
+  childIndecator.style.transform = `translateX(${linkOffest}px)`;
 }
 // show targeting tab
 function showTab(elm) { 
