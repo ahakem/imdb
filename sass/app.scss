@@ -2,6 +2,9 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
+.empty-space{
+  height: 200px;
+}
 @import "partials/header";
 @import "partials/nav";
 @import "partials/slider";
@@ -9,4 +12,4 @@ body {
 @import "partials/castList";
 @import "partials/castDetails";
 @import "partials/dropdown";
-// @import "partials/movies";
+@import "partials/movies";

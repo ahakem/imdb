@@ -102,3 +102,10 @@ window.onclick = function(event) {
     }
   }
 }
+//  ########################## render static content ###################
+const castMovie = q('.movies-list_movieWraper').outerHTML;
+let castMovies = " ";
+for (let index = 0; index < 30; index++) {
+  castMovies += castMovie;
+}
+q('.movies-list').innerHTML = castMovies;

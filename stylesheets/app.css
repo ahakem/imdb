@@ -4,6 +4,11 @@ body {
   margin: 0;
 }
 
+/* line 5, ../sass/app.scss */
+.empty-space {
+  height: 200px;
+}
+
 /* header styling*/
 /* line 3, ../sass/partials/_header.scss */
 .movie-header {
@@ -70,7 +75,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 106;
+  z-index: 102;
 }
 
 /* line 29, ../sass/partials/_nav.scss */
@@ -157,11 +162,6 @@ body {
   padding: 4px;
 }
 
-/* line 48, ../sass/partials/_slider.scss */
-.empty-space {
-  height: 200px;
-}
-
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -185,12 +185,12 @@ body {
     opacity: 0;
   }
 }
-/* line 79, ../sass/partials/_slider.scss */
+/* line 77, ../sass/partials/_slider.scss */
 .castDetails-actor_slider {
   padding: 0;
   text-align: left;
 }
-/* line 83, ../sass/partials/_slider.scss */
+/* line 81, ../sass/partials/_slider.scss */
 .castDetails-actor_slider img {
   margin-left: -4px;
   border-radius: 0;
@@ -367,7 +367,7 @@ body {
 /* line 20, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper {
   position: fixed;
-  z-index: 103;
+  z-index: 107;
   top: 0;
   width: 100%;
   animation-duration: .7s;
@@ -390,7 +390,7 @@ body {
 }
 /* line 42, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper header {
-  border-bottom: 0;
+  border-bottom-color: #2f4975;
   background-color: #2f4975;
 }
 /* line 47, ../sass/partials/_castDetails.scss */
@@ -399,7 +399,7 @@ body {
 }
 /* line 51, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper nav a {
-  width: 49.6%;
+  width: 49%;
   text-align: center;
 }
 @keyframes slideInLeft {
@@ -424,13 +424,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 84, ../sass/partials/_castDetails.scss */
-.castDetails-content_wraper .empty-space {
-  height: 2000px;
-  background: blue;
-}
-
-/* line 89, ../sass/partials/_castDetails.scss */
+/* line 86, ../sass/partials/_castDetails.scss */
 .cast-details_input {
   width: 100%;
   padding: 16px;
@@ -450,7 +444,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 109, ../sass/partials/_castDetails.scss */
+/* line 106, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading {
   background-color: #2f4975;
   color: #fff;
@@ -459,7 +453,7 @@ body {
   margin-top: -4px;
   position: relative;
 }
-/* line 116, ../sass/partials/_castDetails.scss */
+/* line 113, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading h1 {
   font-family: Roboto-Light,HelveticaNeue-Light,HelveticaNeue,sans-serif-light,Arial,sans-serif;
   font-size: 24px;
@@ -474,7 +468,7 @@ body {
   animation-duration: .4s;
   animation-fill-mode: both;
 }
-/* line 130, ../sass/partials/_castDetails.scss */
+/* line 127, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading span {
   display: block;
   color: rgba(255, 255, 255, 0.7);
@@ -496,12 +490,12 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 155, ../sass/partials/_castDetails.scss */
+/* line 152, ../sass/partials/_castDetails.scss */
 .castDetails-actor_info__wraper {
   padding: 24px;
 }
 
-/* line 159, ../sass/partials/_castDetails.scss */
+/* line 156, ../sass/partials/_castDetails.scss */
 .castDetails-acto_bio {
   color: rgba(0, 0, 0, 0.87);
   line-height: 20px;
@@ -511,14 +505,14 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 168, ../sass/partials/_castDetails.scss */
+/* line 165, ../sass/partials/_castDetails.scss */
 .actor-deatils {
   padding: 0;
   animation-name: fadeInUp;
   animation-duration: .4s;
   animation-fill-mode: both;
 }
-/* line 173, ../sass/partials/_castDetails.scss */
+/* line 170, ../sass/partials/_castDetails.scss */
 .actor-deatils li {
   display: block;
   margin-bottom: 4px;
@@ -526,7 +520,7 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
-/* line 179, ../sass/partials/_castDetails.scss */
+/* line 176, ../sass/partials/_castDetails.scss */
 .actor-deatils li span {
   color: #70757A;
   font-weight: normal;
@@ -582,4 +576,46 @@ body {
 /* line 40, ../sass/partials/_dropdown.scss */
 .dropdown-content.open {
   display: block;
+}
+
+/* line 1, ../sass/partials/_movies.scss */
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 6, ../sass/partials/_movies.scss */
+.movies-list_movieWraper {
+  background-color: #fff;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  width: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* line 17, ../sass/partials/_movies.scss */
+.movies-list_movieWraper img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* line 24, ../sass/partials/_movies.scss */
+.cast-movies_name {
+  display: block;
+  font-size: 14px;
+  padding: 8px 8px 0 8px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 31, ../sass/partials/_movies.scss */
+.cast-movies_year {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  padding: 4px 8px 16px 8px;
 }

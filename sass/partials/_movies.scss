@@ -1,12 +1,37 @@
 .movies-list{
   display: flex;
   flex-wrap: wrap;
-  margin: 0 4px 8px;
+  // margin: 0 4px 8px;
 }
 .movies-list_movieWraper{
-  flex-grow: 1;
-  width: 100px;
-  box-sizing: border-box;
-  padding: 24px;
-  background: pink;
+    background-color: #fff;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+    width: 120px;
+    box-sizing: border-box;
+    overflow: hidden;  
+    border-right:1px solid rgba(0, 0, 0, 0.2);;
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+    img{
+      height: 100%;
+       object-fit: cover;
+        width: 100%;
+    }
+}
+
+.cast-movies_name{
+display: block;
+font-size: 14px;
+padding: 8px 8px 0 8px;
+color: rgba(0, 0, 0, 0.8);
+}
+
+.cast-movies_year{
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  padding: 4px 8px 16px 8px;
+
 }

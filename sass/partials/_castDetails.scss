@@ -19,7 +19,7 @@
   
   .castDetails-heder_wraper{
     position: fixed;
-    z-index: 103;
+    z-index: 107;
     top: 0;
     width: 100%;
     animation-duration: .7s;
@@ -40,7 +40,7 @@
       }
     }
     header{
-      border-bottom: 0;
+      border-bottom-color:rgb(47, 73, 117);
       background-color: rgb(47, 73, 117);
       
     }
@@ -49,7 +49,7 @@
       
       // padding: 0;
       a{
-        width: 49.6%;
+        width: 49%;
         text-align: center;
       }
       .navbar-indecator{
@@ -81,10 +81,7 @@
       transform: translate3d(0, 0, 0);
     }
   }
-  .empty-space{
-    height: 2000px;
-    background: blue;
-  }
+  
 }
 .cast-details_input{
   width: 100%;
