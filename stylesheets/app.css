@@ -407,12 +407,29 @@ body {
 .castDetails-content_wraper .castDetails-heder_wraper header {
   border-bottom-color: #2f4975;
   background-color: #2f4975;
+  display: flex;
+  flex-wrap: wrap;
 }
 /* line 47, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper header > div {
+  flex-grow: 16;
+}
+/* line 49, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper header > div:first-child {
+  flex-grow: 1;
+}
+/* line 51, ../sass/partials/_castDetails.scss */
+.castDetails-content_wraper .castDetails-heder_wraper header > div:first-child button {
+  background: none;
+  border: 0;
+  color: #fff;
+  margin-top: 12px;
+}
+/* line 60, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper nav {
   background-color: #2f4975;
 }
-/* line 51, ../sass/partials/_castDetails.scss */
+/* line 64, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper nav a {
   width: 49%;
   text-align: center;
@@ -439,7 +456,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 86, ../sass/partials/_castDetails.scss */
+/* line 99, ../sass/partials/_castDetails.scss */
 .cast-details_input {
   width: 100%;
   padding: 16px;
@@ -459,7 +476,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 106, ../sass/partials/_castDetails.scss */
+/* line 119, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading {
   background-color: #2f4975;
   color: #fff;
@@ -468,7 +485,7 @@ body {
   margin-top: -4px;
   position: relative;
 }
-/* line 113, ../sass/partials/_castDetails.scss */
+/* line 126, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading h1 {
   font-family: Roboto-Light,HelveticaNeue-Light,HelveticaNeue,sans-serif-light,Arial,sans-serif;
   font-size: 24px;
@@ -483,7 +500,7 @@ body {
   animation-duration: .4s;
   animation-fill-mode: both;
 }
-/* line 127, ../sass/partials/_castDetails.scss */
+/* line 140, ../sass/partials/_castDetails.scss */
 .castDetails-actor_heading span {
   display: block;
   color: rgba(255, 255, 255, 0.7);
@@ -505,12 +522,12 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
-/* line 152, ../sass/partials/_castDetails.scss */
+/* line 165, ../sass/partials/_castDetails.scss */
 .castDetails-actor_info__wraper {
   padding: 24px;
 }
 
-/* line 156, ../sass/partials/_castDetails.scss */
+/* line 169, ../sass/partials/_castDetails.scss */
 .castDetails-acto_bio {
   color: rgba(0, 0, 0, 0.87);
   line-height: 20px;
@@ -520,14 +537,14 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 165, ../sass/partials/_castDetails.scss */
+/* line 178, ../sass/partials/_castDetails.scss */
 .actor-deatils {
   padding: 0;
   animation-name: fadeInUp;
   animation-duration: .4s;
   animation-fill-mode: both;
 }
-/* line 170, ../sass/partials/_castDetails.scss */
+/* line 183, ../sass/partials/_castDetails.scss */
 .actor-deatils li {
   display: block;
   margin-bottom: 4px;
@@ -535,7 +552,7 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
-/* line 176, ../sass/partials/_castDetails.scss */
+/* line 189, ../sass/partials/_castDetails.scss */
 .actor-deatils li span {
   color: #70757A;
   font-weight: normal;

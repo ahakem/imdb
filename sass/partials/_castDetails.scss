@@ -42,7 +42,20 @@
     header{
       border-bottom-color:rgb(47, 73, 117);
       background-color: rgb(47, 73, 117);
-      
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        flex-grow: 16;
+        &:first-child{
+          flex-grow: 1;
+          button{
+            background: none;
+            border: 0;
+            color: #fff;
+            margin-top: 12px;
+          }
+        }
+      }
     }
     nav{
       background-color: rgb(47, 73, 117);
