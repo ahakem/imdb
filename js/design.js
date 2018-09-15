@@ -19,7 +19,7 @@ navbar.forEach(function(nav, i) {
   nav.addEventListener('click', function (evt) {
       if (evt.target.nodeName === 'A') {  // ← verifies target is desired element
           animate(evt.target);
-          // showTab(evt.target);
+          showTab(evt.target);
           
       }
   });
@@ -27,9 +27,6 @@ navbar.forEach(function(nav, i) {
 // seating width and potsion for the active tab
 (function setActiveLink(){
   let activeLink = document.querySelectorAll('.nav_activeLink');
-  // indecator[0].style.width = `${activeLink[0].scrollWidth}px`;
-  // indecator[0].style.transform = `translateX(${activeLink[0].offsetLeft}px)`;
-  // indecator[1].style.transform = `translateX(${activeLink[1].offsetLeft}px)`;
   indecator.forEach(function(tab, i) {
     tab.style.width = `${activeLink[i].scrollWidth}px`;
     tab.style.transform = `translateX(${activeLink[i].offsetLeft}px)`;
@@ -41,20 +38,23 @@ function animate(elm){
   let linkWidth = elm.scrollWidth;
   let linkOffest = elm.offsetLeft;
   let parentnav =  elm.closest("nav");
+  let oldActivetab = parentnav.querySelector('.nav_activeLink');
   let childIndecator = parentnav.querySelector('.js-navbar-indecator');
   childIndecator.style.width = `${linkWidth}px`;
   childIndecator.style.transform = `translateX(${linkOffest}px)`;
+  oldActivetab.classList.remove("nav_activeLink");
+  elm.classList.add("nav_activeLink");
 }
 // show targeting tab
 function showTab(elm) { 
-  let activeLink = document.querySelector('.nav_activeLink');
-  activeLink.classList.remove("nav_activeLink");
-  elm.classList.add("nav_activeLink");
-  let targetTab = elm.getAttribute("data-tabId");
-  let oldActiveSection = document.querySelector('.tab-content.tab_active');
-  let activeSection = document.getElementById(targetTab)
-  oldActiveSection.classList.remove("tab_active");
-  activeSection.classList.add("tab_active");
+  // let activeLink = document.querySelector('.nav_activeLink');
+  // activeLink.classList.remove("nav_activeLink");
+  // elm.classList.add("nav_activeLink");
+  // let targetTab = elm.getAttribute("data-tabId");
+  // let oldActiveSection = document.querySelector('.tab-content.tab_active');
+  // let activeSection = document.getElementById(targetTab)
+  // oldActiveSection.classList.remove("tab_active");
+  // activeSection.classList.add("tab_active");
  }
 
 //  ########################## Slider ###################

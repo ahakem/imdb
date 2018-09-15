@@ -19,45 +19,46 @@
         </div>
         <div class="movie-header_info"></div>
       </header>
-      <nav id="navbar" class="movie-topNav js-nav">
+      <nav id="navbar" class="movie-topNav js-nav" data-navContainer="movieTabs">
         <a class="movie-topNav_link " data-tabId="overview" href="javascript:;">Overview</a>
         <a class="movie-topNav_link nav_activeLink" href="javascript:;" data-tabId="cast">Cast</a>
         <span class="navbar-indecator js-navbar-indecator"></span>
       </nav>
-      <div id="overview" class="tab-content ">
-        <section class="slider js-slider">
-          <img  class="movie-poster" src="">
-          <img src="images/2.jpg" alt="nemo">
-          <img src="images/3.jpg" alt="nemo">
-          <img src="images/4.jpg" alt="nemo">
-          <img src="images/5.jpg" alt="nemo">
-        </section>
-        <div class="js-img-overlay img-overlay">
-          <a class="material-icons overlay-close js-close-overlay" href="javascript:;">close</a>
-          <div class="js-img-overlay_content"></div>
+      <div id="movieTabs">
+        <div id="overview" class="tab-content ">
+          <section class="slider js-slider">
+            <img  class="movie-poster" src="">
+            <img src="images/2.jpg" alt="nemo">
+            <img src="images/3.jpg" alt="nemo">
+            <img src="images/4.jpg" alt="nemo">
+            <img src="images/5.jpg" alt="nemo">
+          </section>
+          <div class="js-img-overlay img-overlay">
+            <a class="material-icons overlay-close js-close-overlay" href="javascript:;">close</a>
+            <div class="js-img-overlay_content"></div>
+          </div>
+          <section class="movie-content">
+            <div class="movie-content_rating">
+              <div class="movie-content__source">
+                <a class="movie-content__link imdb_rate" href='javascript:;'></a>
+              </div>
+              <div class="movie-content__source">
+                <a class="movie-content__link rotten_rate" href='javascript:;'></a>
+              </div>
+              <div class="movie-content__source">
+                <a class="movie-content__link metacritic_rate" href='javascript:;'></a>
+              </div>
+            </div>
+            <div class="movie-content_description">
+              <p class="movie_plot"></p>
+              <div class="movie-details"></div>
+            </div>
+            <div class="movie-footer"> <a href="#">show more</a></div>
+          </section>
         </div>
-        <section class="movie-content">
-          <div class="movie-content_rating">
-            <div class="movie-content__source">
-              <a class="movie-content__link imdb_rate" href='javascript:;'></a>
-            </div>
-            <div class="movie-content__source">
-              <a class="movie-content__link rotten_rate" href='javascript:;'></a>
-            </div>
-            <div class="movie-content__source">
-              <a class="movie-content__link metacritic_rate" href='javascript:;'></a>
-            </div>
-          </div>
-          <div class="movie-content_description">
-            <p class="movie_plot"></p>
-            <div class="movie-details"></div>
-          </div>
-          <div class="movie-footer"> <a href="#">show more</a></div>
-        </section>
-      </div>
-      <div id="cast" class="tab-content tab_active">
-        <div class="movie-cast" id="castList"></div>
-        
+        <div id="cast" class="tab-content tab_active">
+          <div class="movie-cast" id="castList"></div>
+        </div>
       </div>
 
       
@@ -70,31 +71,24 @@
                 <input id="actor-input" class="cast-details_input" type="text" />
               </div>
             </header>
-            <nav id="navbar" class="movie-topNav js-nav">
+            <nav id="navbar" data-navContainer="castTabs" class="movie-topNav js-nav">
               <a class="movie-topNav_link nav_activeLink" data-tabId="cast-overview" href="javascript:;">Overview</a>
               <a class="movie-topNav_link" href="javascript:;" data-tabId="cast-movies">Movies</a>
               <span class="navbar-indecator js-navbar-indecator"></span>
             </nav>
           </div>
-          <div class="castDetails-tab-content">
-            <section id="actor-photos" class="slider castDetails-actor_slider"></section>
-            <section class="castDetails-actor_heading">
-              <h1 id="actor-name">Andrew Stanton</h1>
-              <span>American film director</span>
-            </section>
-            <section class="castDetails-actor_info__wraper">
-              <p id="actor-bio" class="castDetails-acto_bio">
-                Andrew Stanton is an American film director, screenwriter, producer and voice actor based at Pixar, which he joined in 1990. His film work includes writing and directing Pixar's A Bug's Life, Finding Nemo and its sequel Finding Dory, WALL-E, and the live-action film, Disney's John Carter. Wikipedia
-              </p>
-              <ul id="actor-deatils" class="actor-deatils">
-                <li>Director: <span>Christopher Nolan</span></li>
-                <li>Language: <span>English</span></li>
-                <li>Production: <span>Paramount Pictures</span></li>
-                <li>Rated: <span>PG-13</span></li>
-                <li>Released: <span>07 Nov 2014</span></li>
-                <li>Year: <span>2014</span></li>
-              </ul>
-            </section>
+          <div id="castTabs">
+            <div class="castDetails-tab-content">
+              <section id="actor-photos" class="slider castDetails-actor_slider"></section>
+              <section class="castDetails-actor_heading">
+                <h1 id="actor-name">Andrew Stanton</h1>
+                <span>American film director</span>
+              </section>
+              <section class="castDetails-actor_info__wraper">
+                <p id="actor-bio" class="castDetails-acto_bio"></p>
+                <ul id="actor-deatils" class="actor-deatils"></ul>
+              </section>
+            </div>
           </div>
           <div class="empty-space2"></div>
         </div>
