@@ -123,5 +123,10 @@ q('.showMoreOrLess').addEventListener('click', function () {
 //  ########################## Close Actor Overlay ###################
 q('#back').addEventListener('click', function () {
   q('.castDetails').classList.remove("open");
-  
+
+  // reseting the active tab after closing the actor details view, this is not the best way to do this and I should revisit.
+  q('#cast-movies').classList.remove("tab_active");
+  q('#cast-overview').classList.add("tab_active");
+  q('#cast-moviesLink').classList.remove("nav_activeLink");
+  q('#cast-overviewLink ').classList.add("nav_activeLink");
 });
