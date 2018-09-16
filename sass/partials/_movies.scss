@@ -1,7 +1,6 @@
 .movies-list{
   display: flex;
   flex-wrap: wrap;
-  // margin: 0 4px 8px;
 }
 .movies-list_movieWraper{
     background-color: #fff;
@@ -12,12 +11,13 @@
     width: 120px;
     box-sizing: border-box;
     overflow: hidden;  
-    border-right:1px solid rgba(0, 0, 0, 0.2);;
+    border-right:1px solid rgba(0, 0, 0, 0.2);
     border-bottom:1px solid rgba(0, 0, 0, 0.2);
+
     img{
       height: 100%;
-       object-fit: cover;
-        width: 100%;
+      object-fit: cover;
+      width: 100%;
     }
 }
 

@@ -1,18 +1,17 @@
 const q = document.querySelector.bind(document);
 
-// window.onscroll = stickyNav;
-// window.addEventListener('scroll', _.throttle(stickyNav, 1000));
-window.addEventListener('scroll', throttle(stickyNav, 120));
+window.onscroll = stickyNav;
+// window.addEventListener('scroll', throttle(stickyNav, 120));
 
-function throttle(fn, wait) {
-  let time = Date.now();
-  return function() {
-    if ((time + wait - Date.now()) < 0) {
-      fn();
-      time = Date.now();
-    }
-  }
-}
+// function throttle(fn, wait) {
+//   let time = Date.now();
+//   return function() {
+//     if ((time + wait - Date.now()) < 0) {
+//       fn();
+//       time = Date.now();
+//     }
+//   }
+// }
 // Get the navbar
 const stickyNavbar = q('.js-stickyNav');
 const navbar = document.querySelectorAll('nav');
@@ -46,7 +45,6 @@ function setActiveLink(){
     tab.style.transform = `translateX(${activeLink[i].offsetLeft}px)`;
   });
 }
-setActiveLink();
 // animating the indecator after clicking on the tab and seeting the active tab link
 function animate(elm){
   let linkWidth = elm.scrollWidth;
@@ -82,6 +80,7 @@ q('.js-slider').addEventListener('click', function (evt) {
   }
 });
 
+// close the image overlay and seeting timeout for removing the animation classes.
 closeOverlayBtn.addEventListener('click', function () {
   overlaywraper.classList.add("active-img_out");
   setTimeout(function(){ 
@@ -142,3 +141,4 @@ q('#back').addEventListener('click', function () {
   q('#cast-overviewLink ').classList.add("nav_activeLink");
 });
 
+setActiveLink();

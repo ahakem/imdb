@@ -1,4 +1,4 @@
-
+// # simple MVC  to get the data of the cast list when click on one of the actors
 const octopus = {
   init: function() {
     model.currentActor = model.cast[0];

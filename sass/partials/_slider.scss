@@ -84,6 +84,10 @@
     animation-name: fadeInRight;
     animation-duration: .7s;
     animation-fill-mode: both;
+    
+    &:first-child{
+      animation-name: zooming;
+    }
 
   }
 }
@@ -96,5 +100,16 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zooming {
+  from {
+    opacity: 0;
+    transform: scale(1.1,1.1);
+  }
+
+  50% {
+    opacity: 1;
   }
 }

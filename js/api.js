@@ -4,12 +4,6 @@ function getMovie(movieName) {
       .then(response => response.json())
       .then(renderData)
 }
-// async function getMovie(movieName) {
-  
-//   const data =  await fetch(`https://www.omdbapi.com/?t=${movieName}&plot=full&apikey=e18f6d40`)
-  
-//   renderData(data)
-// }
 
 function renderData(data) {
   q('.movie-poster').setAttribute("src", data.Poster);
