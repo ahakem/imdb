@@ -14,7 +14,7 @@ body {
 .movie-header {
   background: #66800D;
   color: #fff;
-  padding: 16px;
+  padding: 8px;
   border-bottom: 1px solid #90a15d;
 }
 
@@ -391,7 +391,7 @@ body {
 }
 /* line 29, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper + .castDetails-tab-content {
-  padding-top: 114px;
+  padding-top: 95px;
 }
 /* line 32, ../sass/partials/_castDetails.scss */
 .castDetails-content_wraper .castDetails-heder_wraper + .castDetails-tab-content .tab-content:first-child.animated {
@@ -468,7 +468,7 @@ body {
 /* line 107, ../sass/partials/_castDetails.scss */
 .cast-details_input {
   width: 100%;
-  padding: 16px;
+  padding: 14px;
   box-sizing: border-box;
   border-radius: 3px;
   border: 0;

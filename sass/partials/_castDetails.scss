@@ -27,7 +27,7 @@
     animation-name: fadeInDown;
     
     + .castDetails-tab-content{
-      padding-top: 114px;
+      padding-top: 95px;
       .tab-content{
         &:first-child.animated{
         animation-name:slideInRight ;
@@ -106,7 +106,7 @@
 }
 .cast-details_input{
   width: 100%;
-  padding: 16px;
+  padding: 14px;
   box-sizing: border-box;
   border-radius: 3px;
   border: 0;
