@@ -4,6 +4,13 @@ function getMovie(movieName) {
       .then(response => response.json())
       .then(renderData)
 }
+// async function getMovie(movieName) {
+  
+//   const data =  await fetch(`https://www.omdbapi.com/?t=${movieName}&plot=full&apikey=e18f6d40`)
+  
+//   renderData(data)
+// }
+
 function renderData(data) {
   q('.movie-poster').setAttribute("src", data.Poster);
   q('.movie-header_name').textContent = data.Title ;
@@ -11,7 +18,7 @@ function renderData(data) {
   q('.imdb_rate').innerHTML = `${data.imdbRating} <span>imdb</span>`;
   q('.rotten_rate').innerHTML = `${data.Ratings[1].Value} <span>Rotten Tomatoes</span>`;
   q('.metacritic_rate').innerHTML = `${data.Ratings[2].Value} <span>Metacritic</span>`;
-  q('.movie_plot').textContent = data.Plot;
+  q('.movie_plot').innerHTML = data.Plot;
 
   q('.movie-detailswraper').innerHTML = `
     <ul class="movie-deatils">

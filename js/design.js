@@ -1,15 +1,28 @@
 const q = document.querySelector.bind(document);
 
-window.onscroll = function() {stickyNav()};
+// window.onscroll = stickyNav;
+// window.addEventListener('scroll', _.throttle(stickyNav, 1000));
+window.addEventListener('scroll', throttle(stickyNav, 120));
+
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
+    }
+  }
+}
 // Get the navbar
-const stickyNavbar = document.querySelector('.js-stickyNav');
+const stickyNavbar = q('.js-stickyNav');
 const navbar = document.querySelectorAll('nav');
 const indecator = document.querySelectorAll('.js-navbar-indecator');
 // Get the offset position of the navbar
-var sticky = stickyNavbar.offsetTop;
+let sticky = stickyNavbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNav() {
+  console.log("hi");
   if (window.pageYOffset >= sticky) {
     stickyNavbar.classList.add("sticky");
   } else {
@@ -18,12 +31,11 @@ function stickyNav() {
 }
 
 // Tabs
-navbar.forEach(function(nav, i) {
+navbar.forEach(function(nav) {
   nav.addEventListener('click', function (evt) {
       if (evt.target.nodeName === 'A') {  // ← verifies target is desired element
           animate(evt.target);
           showTab(evt.target);
-          
       }
   });
 });
@@ -61,8 +73,8 @@ function showTab(elm) {
  }
 
 //  ########################## Slider ###################
-const overlaywraper = document.querySelector('.js-img-overlay');
-const closeOverlayBtn = document.querySelector('.js-close-overlay');
+const overlaywraper = q('.js-img-overlay');
+const closeOverlayBtn = q('.js-close-overlay');
 
 
 q('.js-slider').addEventListener('click', function (evt) {
@@ -130,3 +142,4 @@ q('#back').addEventListener('click', function () {
   q('#cast-moviesLink').classList.remove("nav_activeLink");
   q('#cast-overviewLink ').classList.add("nav_activeLink");
 });
+

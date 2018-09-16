@@ -1,5 +1,5 @@
 
-var octopus = {
+const octopus = {
   init: function() {
     model.currentActor = model.cast[0];
       castListView.init();
@@ -79,6 +79,7 @@ var castListView = {
                   actorView.render();
                   q('#castDetails').classList.add("open");
                   setActiveLink();
+                  
               };
           })(actor));
           this.castListElem.appendChild(elem);

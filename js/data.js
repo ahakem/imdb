@@ -1,4 +1,4 @@
-var model = {
+const model = {
   currentActor: null,
   cast: [
       {
