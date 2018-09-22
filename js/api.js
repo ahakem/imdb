@@ -1,10 +1,8 @@
-
-function getMovie(movieName) {
-  fetch(`https://www.omdbapi.com/?t=${movieName}&plot=full&apikey=e18f6d40`)
-      .then(response => response.json())
-      .then(renderData)
+async function getMovie(movieName) {
+  const response =  await fetch(`https://www.omdbapi.com/?t=${movieName}&plot=full&apikey=e18f6d40`);
+  const data = await response.json();
+  renderData(data)
 }
-
 function renderData(data) {
   q('.movie-poster').setAttribute("src", data.Poster);
   q('.movie-header_name').textContent = data.Title ;
