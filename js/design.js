@@ -1,17 +1,7 @@
 const q = document.querySelector.bind(document);
 
 window.onscroll = stickyNav;
-// window.addEventListener('scroll', throttle(stickyNav, 120));
 
-// function throttle(fn, wait) {
-//   let time = Date.now();
-//   return function() {
-//     if ((time + wait - Date.now()) < 0) {
-//       fn();
-//       time = Date.now();
-//     }
-//   }
-// }
 // Get the navbar
 const stickyNavbar = q('.js-stickyNav');
 const navbar = document.querySelectorAll('nav');
