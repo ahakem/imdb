@@ -23,3 +23,5 @@ in the console you can call this `getMovie('Movie Name');`
 ## what I cared about here.
 - Event delegation for better performance
 - Unifayed code for the navigation so multibale navs will never confliect 
+## demo
+[https://ahakem.github.io/imdb/](https://ahakem.github.io/imdb/)
