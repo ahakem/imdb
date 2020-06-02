@@ -13,8 +13,9 @@ in the console you can call this `getMovie('Movie Name');`
 ## funcutionality you can check.
 
 - information about any movie via `omdbapi`
+- DropDown menu in navigation (Static Links)
 - overview tab
-    - first image from the API and a static gallery
+    - first image from the API and a static gallery (image will open in full screen when you click)
     - show more/less info
 - Cast Tab (fully static content)
     when you click on any actor it will open another screen with some info  from `data.js` file
