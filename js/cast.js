@@ -1,40 +1,38 @@
 // # simple MVC  to get the data of the cast list when click on one of the actors
 const octopus = {
-  init: function() {
+  init: function () {
     model.currentActor = model.cast[0];
-      castListView.init();
-      actorView.init();
+    castListView.init();
+    actorView.init();
   },
-  getCurrentActor: function() {
+  getCurrentActor: function () {
     return model.currentActor;
   },
-  setCurrentActor: function(actor) {
+  setCurrentActor: function (actor) {
     model.currentActor = actor;
-},
+  },
 
-  getCast: function() {
-      return model.cast;
-  }
-
+  getCast: function () {
+    return model.cast;
+  },
 };
 
 var actorView = {
-
-  init: function() {
-    this.actorphotosWraper = document.getElementById('actor-photos');
-    this.actorName = document.getElementById('actor-name');
-    this.actorBio = document.getElementById('actor-bio');
-    this.actorDetails = document.getElementById('actor-deatils');
-    this.actorInput = document.getElementById('actor-input');
+  init: function () {
+    this.actorphotosWraper = document.getElementById("actor-photos");
+    this.actorName = document.getElementById("actor-name");
+    this.actorBio = document.getElementById("actor-bio");
+    this.actorDetails = document.getElementById("actor-deatils");
+    this.actorInput = document.getElementById("actor-input");
     this.render();
   },
 
-render: function() {
+  render: function () {
     // update the DOM elements with values from the current cat
     var currentActor = octopus.getCurrentActor();
     var actorPhotos = currentActor.photos;
     var images = " ";
-    actorPhotos.forEach(function(url) {
+    actorPhotos.forEach(function (url) {
       img = `<img src="${url}" />`;
       images += img;
     });
@@ -48,44 +46,44 @@ render: function() {
     <li>Upcoming movie: <span>${currentActor.upcomingmovie}</span></li>
     <li>Children: <span>${currentActor.children}</span></li>
     `;
-  }
+  },
 };
 
 var castListView = {
+  init: function () {
+    this.castListElem = document.getElementById("castList");
 
-  init: function() {
-      this.castListElem = document.getElementById('castList');
-      
-      this.render();
+    this.render();
   },
 
-  render: function() {
-      var cast, elem, i;
-      var cast = octopus.getCast();
-      this.castListElem.innerHTML = '';
-      for (i = 0; i < cast.length; i++) {
-          actor = cast[i];
-          elem = document.createElement('div');
-          elem.classList.add("movie-cast_actor");
-          elem.innerHTML = `
+  render: function () {
+    var cast, elem, i;
+    var cast = octopus.getCast();
+    this.castListElem.innerHTML = "";
+    for (i = 0; i < cast.length; i++) {
+      actor = cast[i];
+      elem = document.createElement("div");
+      elem.classList.add("movie-cast_actor");
+      elem.innerHTML = `
             <a href="javascript:;">
               <div><img src="${actor.imgSrc}" alt="${actor.name}"></div>
               <span class="movie-cast_actorname">${actor.name}</span>
               <span class="movie-cast_caractername">${actor.character}</span>
-            </a> `
-          elem.addEventListener('click', (function(actorCopy) {
-              return function() {
-                  octopus.setCurrentActor(actorCopy);
-                  actorView.render();
-                  q('#castDetails').classList.add("open");
-                  setActiveLink();
-                  
-              };
-          })(actor));
-          this.castListElem.appendChild(elem);
-      }
-  }
+            </a> `;
+      elem.addEventListener(
+        "click",
+        (function (actorCopy) {
+          return function () {
+            octopus.setCurrentActor(actorCopy);
+            actorView.render();
+            q("#castDetails").classList.add("open");
+            setActiveLink();
+          };
+        })(actor)
+      );
+      this.castListElem.appendChild(elem);
+    }
+  },
 };
-
 
 octopus.init();
